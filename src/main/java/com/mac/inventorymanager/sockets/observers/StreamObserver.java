@@ -11,11 +11,7 @@ import com.mac.inventorymanager.sockets.SocketClient;
  *
  * @author Mac
  */
-public interface StreamObserver {
+public interface StreamObserver extends Runnable{
     
-    void streamReceived(String data);
-    
-    void disconnecting(SocketClient sc);
-    
-    void connecting(SocketClient sc);
+    void setStream(String data);
 }

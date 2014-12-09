@@ -15,7 +15,9 @@ import java.net.InetAddress;
  */
 public interface SocketClient {
     
-    public void connect(InetAddress ip, int port) throws IOException;
+    public void setServerParameters(InetAddress ip, int port);
+    
+    public void connect() throws IOException;
     
     public void disconnect() throws IOException;
     
