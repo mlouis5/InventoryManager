@@ -6,6 +6,8 @@
 package com.mac.inventorymanager.sockets;
 
 import com.mac.inventorymanager.sockets.observers.StreamObserver;
+import java.io.IOException;
+import java.net.InetAddress;
 
 /**
  *
@@ -13,9 +15,9 @@ import com.mac.inventorymanager.sockets.observers.StreamObserver;
  */
 public interface SocketClient {
     
-    public void connect(String ip, int port);
+    public void connect(InetAddress ip, int port) throws IOException;
     
-    public void disconnect();
+    public void disconnect() throws IOException;
     
     public void addStreamObserver(StreamObserver streamObserver);
     
